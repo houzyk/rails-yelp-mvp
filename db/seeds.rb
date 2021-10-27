@@ -15,9 +15,9 @@ puts 'Creating 5 restaurants'
     name: Faker::Restaurant.name,
     address: Faker::Address.full_address,
     phone_number: Faker::PhoneNumber.cell_phone,
-    category: Faker::Restaurant.type
+    category: ['chinese', 'italian', 'japanese', 'french', 'belgian'].sample
   )
-  restaurant.save
+  restaurant.save!
   puts "#{restaurant.name} has been created"
 end
 puts 'Created 5 restaurants'
