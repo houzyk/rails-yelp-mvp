@@ -1,0 +1,7 @@
+<h1>All Reviews</h1>
+
+<ul>
+<%@reviews.each do |review|%>
+  <li> <%= review.rating%> - <%= review.content%> </li>
+<%end%>
+</ul>
